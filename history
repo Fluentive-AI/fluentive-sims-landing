@@ -1,0 +1,359 @@
+git checkout main
+git status
+git reset --hard 489a78ed159ef30f1aae8b52333d37713ae0bc07
+git status
+git push --force-with-lease origin main
+npm run dev
+git status
+git checkout 489a78ed159ef30f1aae8b52333d37713ae0bc07
+git status
+git merge b4315abc60dc1d778cbe60d8fc37308da5c0960b --strategy-option=ours
+git checkout main
+pnpm run dev
+pnpm run dev
+pnpm i
+pnpm run dev
+pnpm run dev
+cd /Users/eytanrozenblum/Desktop/1.\ Professional/FluentiveAI/3.\ Tech/3.\ Website/fluentive-site-2 && git status
+git log --oneline -5
+git log origin/main --oneline -1
+git push origin main
+git status
+git checkout main
+git add .
+git commit -m "removed YC logo until meeting with MoxiWorks to avoid confusion/ questions about both activities"
+git push origin main
+git checkout -b real-estate-deals
+git branch
+git checkout -b real-estate-deals
+git checkout real-estate-deals
+git checkout fe02429772265029e8c38275481766a230069c49
+git add ?.
+git add .
+git commit -m "commented out the YC reference in mobile QA page until meeting with moxiworks to avoid uneasy questions"
+git push origin main
+git add .
+git commit -m "commented out the YC reference in mobile QA page until meeting with moxiworks to avoid uneasy questions"
+git push origin main
+git checkout real-estate-deals
+bash -lc 'mkdir -p "/Users/eytanrozenblum/Desktop/1. Professional/FluentiveAI/3. Tech/3. Website/hadmaya/assets" && touch "/Users/eytanrozenblum/Desktop/1. Professional/FluentiveAI/3. Tech/3. Website/hadmaya/index.html" "/Users/eytanrozenblum/Desktop/1. Professional/FluentiveAI/3. Tech/3. Website/hadmaya/styles.css" "/Users/eytanrozenblum/Desktop/1. Professional/FluentiveAI/3. Tech/3. Website/hadmaya/script.js" && echo "OK"
+bash -lc 'cat > index.html <<"EOF"\
+<!doctype html>\
+<html lang="en">\
+<head>\
+	<meta charset="utf-8">\
+	<meta name="viewport" content="width=device-width, initial-scale=1">\
+	<title>Hadmaya â€ƒ³ Reinventing Market Research with AI</title>\
+	<meta name="description" content="Simulate consumer behavior with generative agents to test, learn, and decide faster. YC-backed team building AI-powered social simulations for market research.">\
+	<link rel="preconnect" href="https://fonts.googleapis.com">\
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">\
+	<link rel="stylesheet" href="styles.css">\
+</head>\
+<body>\
+	<header class="site-header">\
+		<div class="container nav">\
+			<div class="logo">Hadmaya</div>\
+			<nav class="menu">\
+				<a href="#what">What we do</a>\
+				<a href="#how">How it works</a>\
+				<a href="#use-cases">Use cases</a>\
+				<a href="#about">About</a>\
+			</nav>\
+			<a class="btn primary" href="#cta">Request a demo</a>\
+		</div>\
+	</header>\
+\
+	<main>\
+		<section class="hero">\
+			<div class="hero-bg" aria-hidden="true"></div>\
+			<div class="container hero-content">\
+				<h1>Reinventing Market Research with AI</h1>\
+				<p class="sub">Simulate consumer behavior with generative agents to test, learn, and decide faster.</p>\
+				<div class="cta-row">\
+					<a class="btn primary" href="#cta">Get early access</a>\
+					<a class="btn ghost" href="#how">See how it works</a>\
+				</div>\
+				<div class="hero-visual" role="img" aria-label="Agent network simulation visualization"></div>\
+				<div class="cred-strip">\
+					<span>YC-backed</span>\
+					<span>Economics â€ƒ‚ OR â€ƒ‚ AI</span>\
+				</div>\
+			</div>\
+		</section>\
+\
+		<section id="what" class="section">\
+			<div class="container two-col">\
+				<div>\
+					<h2>What we do</h2>\
+					<p>Replace slow, expensive surveys and biased panels with AI-driven social simulations. Our generative agents form synthetic populations seeded with your real data â€ƒ´ reviews, CRM histories, social signals, and purchases â€ƒ´ to produce dynamic, lifelike consumer journeys.</p>\
+					<ul class="checks">\
+						<li>Faster insights: from weeks to hours</li>\
+						<li>Cheaper research: no panel recruiting</li>\
+						<li>Smarter simulations: memory, reflection, planning</li>\
+					</ul>\
+				</div>\
+				<div class="card glass">\
+					<h3>Why it matters</h3>\
+					<p>Agents interact, influence, and make purchase decisions over time â€ƒ´ revealing emergent behaviors that static methods miss.</p>\
+					<div class="mini-visual" aria-hidden="true"></div>\
+				</div>\
+			</div>\
+		</section>\
+\
+		<section id="how" class="section alt">\
+			<div class="container">\
+				<h2>How it works</h2>\
+				<div class="steps">\
+					<div class="step">\
+						<div class="step-num">1</div>\
+						<h3>Seed agents with data</h3>\
+						<p>Ingest reviews, CRM, social streams, purchase events. Create cohorts with traits and goals.</p>\
+					</div>\
+					<div class="step">\
+						<div class="step-num">2</div>\
+						<h3>Run simulations</h3>\
+						<p>Agents consume content, interact, and decide. Memory and reflection guide evolving behaviors.</p>\
+					</div>\
+					<div class="step">\
+						<div class="step-num">3</div>\
+						<h3>Get insights</h3>\
+						<p>See lift, segments, network effects, and consumer journeys. Export evidence to stakeholders.</p>\
+					</div>\
+				</div>\
+			</div>\
+		</section>\
+\
+		<section id="use-cases" class="section">\
+			<div class="container">\
+				<h2>Use cases</h2>\
+				<div class="grid cards">\
+					<div class="card">\
+						<h3>Product launches</h3>\
+						<p>Test positioning, features, and pricing before you ship.</p>\
+					</div>\
+					<div class="card">\
+						<h3>Campaign testing</h3>\
+						<p>Simulate reach, resonance, and peer-to-peer spread.</p>\
+					</div>\
+					<div class="card">\
+						<h3>Consumer segmentation</h3>\
+						<p>Identify emergent segments and their conversion triggers.</p>\
+					</div>\
+					<div class="card">\
+						<h3>Policy analysis</h3>\
+						<p>Understand responses to nudges, constraints, and incentives.</p>\
+					</div>\
+					<div class="card">\
+						<h3>UX research</h3>\
+						<p>Evaluate flows and content with agent-based journeys.</p>\
+					</div>\
+					<div class="card">\
+						<h3>Finance & economics</h3>\
+						<p>Model markets, adoption curves, and shocks.</p>\
+					</div>\
+				</div>\
+			</div>\
+		</section>\
+\
+		<section id="about" class="section alt">\
+			<div class="container two-col">\
+				<div>\
+					<h2>About us</h2>\
+					<p>We are a YC-backed team with backgrounds in economics, operations research, and AI. We are building the next generation of market research â€ƒ´ dynamic, synthetic, and grounded in real data.</p>\
+				</div>\
+				<div class="card glass">\
+					<h3>Our belief</h3>\
+					<p>Markets are social systems. To understand them, you need agents that think, remember, and influence each other.</p>\
+				</div>\
+			</div>\
+		</section>\
+\
+		<section id="cta" class="section cta">\
+			<div class="container">\
+				<h2>Get early access</h2>\
+				<p>Request a demo and see your market â€ƒ´ simulated.</p>\
+				<form class="demo-form" action="https://formspree.io/f/xbldzqed" method="POST">\
+					<input type="text" name="name" placeholder="Your name" required>\
+					<input type="email" name="email" placeholder="Work email" required>\
+					<input type="text" name="company" placeholder="Company">\
+					<button class="btn primary" type="submit">Request a demo</button>\
+				</form>\
+			</div>\
+		</section>\
+	</main>\
+\
+	<footer class="site-footer">\
+		<div class="container foot">\
+			<div class="logo">Hadmaya</div>\
+			<div class="fine">\
+				<span>Â© <span id="year"></span> Hadmaya</span>\
+				<a href="mailto:hello@hadmaya.ai">hello@hadmaya.ai</a>\
+			</div>\
+		</div>\
+	</footer>\
+	<script src="script.js"></script>\
+</body>\
+</html>\
+EOF\
+\
+cat > styles.css <<"EOF"\
+:root {\
+	--bg: #070810;\
+	--panel: #0d0f1b;\
+	--text: #e8ebff;\
+	--muted: #a6b0d6;\
+	--brand: #7c5cff;\
+	--brand-2: #2ed3ff;\
+	--accent: #22d39c;\
+	--glass: rgba(255,255,255,0.06);\
+}\
+\
+* { box-sizing: border-box; }\
+html, body { height: 100%; }\
+body {\
+	margin: 0;\
+	font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";\
+	background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,0.15), transparent),\
+		radial-gradient(1200px 800px at -10% 30%, rgba(46,211,255,0.15), transparent),\
+		var(--bg);\
+	color: var(--text);\
+	line-height: 1.55;\
+}\
+\
+.container { width: min(1120px, 92%); margin: 0 auto; }\
+\
+.site-header { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.2) blur(8px); background: rgba(7,8,16,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); }\
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; }\
+.logo { font-weight: 800; letter-spacing: 0.2px; }\
+.menu { display: none; gap: 20px; }\
+.menu a { color: var(--muted); text-decoration: none; font-weight: 500; }\
+.menu a:hover { color: var(--text); }\
+\
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; color: var(--text); font-weight: 600; }\
+.btn.primary { background: linear-gradient(90deg, var(--brand), var(--brand-2)); border: none; box-shadow: 0 8px 24px rgba(124,92,255,0.25); }\
+.btn.ghost { background: transparent; }\
+\
+.hero { position: relative; overflow: hidden; }\
+.hero .hero-bg { position: absolute; inset: 0; background: radial-gradient(900px 600px at 70% 20%, rgba(124,92,255,0.25), transparent), radial-gradient(900px 600px at 10% 70%, rgba(46,211,255,0.25), transparent); pointer-events: none; }\
+.hero-content { padding: 96px 0 48px; text-align: center; }\
+.hero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; margin: 0 0 12px; letter-spacing: -0.02em; }\
+.hero .sub { font-size: clamp(16px, 2.5vw, 22px); color: var(--muted); margin: 0 auto 24px; max-width: 820px; }\
+.cta-row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\
+\
+.hero-visual { position: relative; width: 100%; height: 340px; margin: 40px auto 8px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); overflow: hidden; }\
+.hero-visual::before, .hero-visual::after { content: ""; position: absolute; inset: 0; }\
+.hero-visual::before { background: radial-gradient(500px 300px at 30% 50%, rgba(124,92,255,0.25), transparent), radial-gradient(500px 300px at 70% 40%, rgba(46,211,255,0.25), transparent); mix-blend-mode: screen; }\
+.hero-visual::after { background-image: radial-gradient(circle at 20% 40%, rgba(255,255,255,0.35) 2px, transparent 3px), radial-gradient(circle at 40% 70%, rgba(255,255,255,0.35) 2px, transparent 3px), radial-gradient(circle at 60% 30%, rgba(255,255,255,0.35) 2px, transparent 3px), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.35) 2px, transparent 3px); background-size: 100% 100%; }\
+\
+.cred-strip { display: flex; gap: 14px; justify-content: center; color: var(--muted); font-size: 14px; margin-top: 8px; }\
+\
+.section { padding: 72px 0; }\
+.section.alt { background: linear-gradient(0deg, rgba(255,255,255,0.03), rgba(255,255,255,0)); }\
+.two-col { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }\
+.grid.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }\
+\
+.card { padding: 18px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }\
+.card.glass { background: var(--glass); backdrop-filter: blur(8px); }\
+\
+.checks { list-style: none; padding: 0; margin: 16px 0 0; }\
+.checks li { margin: 8px 0; padding-left: 24px; position: relative; }\
+.checks li::before { content: "âƒ¼ƒ´"; position: absolute; left: 0; color: var(--accent); }\
+\
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }\
+.step { padding: 18px; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; background: rgba(255,255,255,0.04); }\
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 10px; }\
+\
+.cta { text-align: center; }\
+.demo-form { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 12px; margin-top: 14px; }\
+.demo-form input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 12px; color: var(--text); }\
+.demo-form input::placeholder { color: var(--muted); }\
+\
+.site-footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 22px 0 36px; background: rgba(0,0,0,0.2); }\
+.foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }\
+.fine { display: flex; align-items: center; gap: 12px; color: var(--muted); }\
+\
+@media (min-width: 860px) { .menu { display: flex; } }\
+@media (max-width: 859px) {\
+	.two-col { grid-template-columns: 1fr; }\
+	.grid.cards { grid-template-columns: 1fr 1fr; }\
+	.steps { grid-template-columns: 1fr; }\
+	.demo-form { grid-template-columns: 1fr; }\
+}\
+EOF\
+\
+cat > script.js <<"EOF"\
+(function(){\
+	const year = document.getElementById('year');\
+	if (year) { year.textContent = new Date().getFullYear(); }\
+\
+	// Decorative node animation in hero visual\
+	const visual = document.querySelector('.hero-visual');\
+	if (!visual) return;\
+	const canvas = document.createElement('canvas');\
+	visual.appendChild(canvas);\
+	const ctx = canvas.getContext('2d');\
+	let width, height, nodes;\
+\
+	function resize(){\
+		width = canvas.width = visual.clientWidth;\
+		height = canvas.height = visual.clientHeight;\
+		nodes = createNodes();\
+	}\
+	window.addEventListener('resize', resize);\
+	resize();\
+\
+	function createNodes(){\
+		const count = Math.max(24, Math.floor(width * height / 18000));\
+		const arr = [];\
+		for (let i=0;i<count;i++){\
+			arr.push({\
+				x: Math.random()*width,\
+				y: Math.random()*height,\
+				vx: (Math.random()-0.5)*0.3,\
+				vy: (Math.random()-0.5)*0.3,\
+				r: 2 + Math.random()*2\
+			});\
+		}\
+		return arr;\
+	}\
+\
+	function step(){\
+		ctx.clearRect(0,0,width,height);\
+		// draw links\
+		for (let i=0;i<nodes.length;i++){\
+			for (let j=i+1;j<nodes.length;j++){\
+				const a = nodes[i], b = nodes[j];\
+				const dx = a.x-b.x, dy = a.y-b.y;\
+				const d2 = dx*dx+dy*dy;\
+				if (d2 < 140*140){\
+					const alpha = 1 - d2/(140*140);\
+					ctx.strokeStyle = `rgba(124,92,255,${alpha*0.3})`;\
+					ctx.lineWidth = 1;\
+					ctx.beginPath();\
+					ctx.moveTo(a.x, a.y);\
+					ctx.lineTo(b.x, b.y);\
+					ctx.stroke();\
+				}\
+			}\
+		}\
+		// draw nodes\
+		for (const n of nodes){\
+			ctx.fillStyle = 'rgba(255,255,255,0.9)';\
+			ctx.beginPath();\
+			ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);\
+			ctx.fill();\
+			n.x += n.vx; n.y += n.vy;\
+			if (n.x < 0 || n.x > width) n.vx *= -1;\
+			if (n.y < 0 || n.y > height) n.vy *= -1;\
+		}\
+		requestAnimationFrame(step);\
+	}\
+	requestAnimationFrame(step);\
+})();\
+EOF'
+bash -lc "jq -r '.scripts.dev' package.json | cat"
+bash -lc 'ls -la src | cat'
+bash -lc 'cat src/sections | cat'
+bash -lc 'ls -la src/sections | cat'
+bash -lc 'npm install --no-fund --no-audit | cat'

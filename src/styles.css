@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --background: 222 84% 4%;
+  --foreground: 220 40% 96%;
+  --card: 222 84% 6%;
+  --card-foreground: 220 40% 96%;
+  --popover: 222 84% 6%;
+  --popover-foreground: 220 40% 96%;
+  --primary: 258 90% 66%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 100% 52%;
+  --secondary-foreground: 222 84% 6%;
+  --muted: 220 24% 70%;
+  --accent: 158 64% 48%;
+  --accent-foreground: 222 84% 6%;
+  --border: 222 30% 18%;
+  --input: 222 30% 18%;
+  --ring: 258 90% 66%;
+  --radius: 14px;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased; }
+
+.container { @apply max-w-6xl mx-auto px-4; }
+
+.gradient-bg {
+  background:
+    radial-gradient(1000px 600px at 80% -10%, hsla(258,90%,66%,0.25), transparent),
+    radial-gradient(1000px 600px at -10% 40%, hsla(196,100%,52%,0.22), transparent),
+    hsl(var(--background));
+}
+
+.glass { @apply bg-white/5 border border-white/10 backdrop-blur-md; }
+
+.btn { @apply inline-flex items-center justify-center rounded-xl font-semibold transition-colors; }
+.btn-primary { @apply btn text-white px-5 py-3 bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))] shadow-[0_10px_30px_rgba(124,92,255,0.25)]; }
+.btn-ghost { @apply btn px-5 py-3 border border-white/10; }
+
+.h1 { @apply text-4xl md:text-6xl font-extrabold tracking-tight; }
+.h2 { @apply text-3xl md:text-4xl font-bold; }
+.sub { @apply text-lg text-[hsl(var(--muted))]; }
+
+.grid-cards { @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4; }
+.section { @apply py-16; }
+.alt { @apply bg-white/5; }
+
+
