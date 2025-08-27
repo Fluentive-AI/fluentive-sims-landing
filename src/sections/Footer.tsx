@@ -6,7 +6,7 @@ export function Footer(){
     <footer className="border-t border-white/10 bg-black/30">
       <div className="container py-6 flex items-center justify-between gap-3 text-white">
         <div className="flex items-center gap-3">
-          <img src="/public/logo-white.png" alt="Fluentive" className="h-6 w-6" />
+          <img src="/logo-white.png" alt="Fluentive" className="h-6 w-6" />
           <div className="font-extrabold text-white">Fluentive</div>
         </div>
         <div className="flex items-center gap-4">
