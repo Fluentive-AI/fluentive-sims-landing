@@ -407,3 +407,13 @@ npm install
 npm install
 python3 -m http.server 8080
 npm run dev
+npm i -D @types/react @types/react-dom
+git add .
+git commit -m "hadmaya website v1"
+git push origin main
+git add .
+git commit -m "added fluentive name"
+git push origin main
+npm run dev
+npm run dev
+pnpm run dev
