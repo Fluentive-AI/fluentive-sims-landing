@@ -2,15 +2,52 @@ import React from 'react'
 
 export function About(){
   return (
-    <section id="about" className="section bg-white/5">
-      <div className="container grid md:grid-cols-[1.4fr_1fr] gap-7 items-start">
-        <div>
-          <h2 className="h2">About us</h2>
-          <p className="mt-2 text-[hsl(var(--muted))]">We are a YC-backed team with backgrounds in economics, operations research, and AI. We are building the next generation of market research — dynamic, synthetic, and grounded in real data.</p>
+    <section id="about" className="section scroll-mt-16 md:scroll-mt-16 py-16 md:py-24">
+      <div className="mx-auto max-w-4xl px-6 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center">
+            <h2 className="h1 font-normal font-helvetica text-center mb-6 whitespace-nowrap">Reimagining Market Research</h2>
+          </div>
+          <p className="sub max-w-4xl mx-auto text-xl md:text-2xl leading-relaxed">
+            Built by economists, AI experts, and software engineers who believe the future of consumer insights lies in collaborative intelligence, not static surveys.
+          </p>
         </div>
-        <div className="glass rounded-xl p-5">
-          <h3 className="font-semibold text-lg">Our belief</h3>
-          <p className="mt-2 text-[hsl(var(--muted))]">Markets are social systems. To understand them, you need agents that think, remember, and influence each other.</p>
+
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+          {/* Left: Core Belief */}
+          <div className="space-y-6">
+            <div className="relative glass-card rounded-xl p-8 md:p-10 h-full min-h-[20rem] flex flex-col">
+              <div className="glass-filter" />
+              <div className="glass-distortion-overlay" />
+              <div className="glass-overlay" />
+              <div className="glass-specular" />
+              <div className="glass-content flex flex-col justify-center flex-1">
+                <h3 className="font-helvetica text-2xl font-normal text-center mb-4">Why we exist</h3>
+                <p className="text-lg leading-relaxed text-center text-[hsl(var(--muted-foreground))]">
+                  User demands are evolving faster than ever, and traditional market research cannot keep up. Weeks of waiting, expensive panels, and insights that are outdated by the time you get them.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Mission */}
+          <div className="space-y-6">
+            {/* Mission */}
+            <div className="relative glass-card rounded-xl p-8 md:p-10 h-full min-h-[20rem] flex flex-col">
+              <div className="glass-filter" />
+              <div className="glass-distortion-overlay" />
+              <div className="glass-overlay" />
+              <div className="glass-specular" />
+              <div className="glass-content flex flex-col justify-center flex-1">
+                <h3 className="font-helvetica text-2xl font-normal text-center mb-4">Our Mission</h3>
+                <p className="text-lg leading-relaxed text-center text-[hsl(var(--muted-foreground))]">
+                  We're building AI-powered synthetic consumers that learn from your real customer data, think like humans, and give you insights in minutes, not weeks.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

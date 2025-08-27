@@ -43,7 +43,7 @@ bash -lc 'cat > index.html <<"EOF"\
 <head>\
 	<meta charset="utf-8">\
 	<meta name="viewport" content="width=device-width, initial-scale=1">\
-	<title>Hadmaya â€ƒ³ Reinventing Market Research with AI</title>\
+	<title>Hadmaya â€ƒï¿½ Reinventing Market Research with AI</title>\
 	<meta name="description" content="Simulate consumer behavior with generative agents to test, learn, and decide faster. YC-backed team building AI-powered social simulations for market research.">\
 	<link rel="preconnect" href="https://fonts.googleapis.com">\
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
@@ -77,7 +77,7 @@ bash -lc 'cat > index.html <<"EOF"\
 				<div class="hero-visual" role="img" aria-label="Agent network simulation visualization"></div>\
 				<div class="cred-strip">\
 					<span>YC-backed</span>\
-					<span>Economics â€ƒ‚ OR â€ƒ‚ AI</span>\
+					<span>Economics â€ƒï¿½ OR â€ƒï¿½ AI</span>\
 				</div>\
 			</div>\
 		</section>\
@@ -86,7 +86,7 @@ bash -lc 'cat > index.html <<"EOF"\
 			<div class="container two-col">\
 				<div>\
 					<h2>What we do</h2>\
-					<p>Replace slow, expensive surveys and biased panels with AI-driven social simulations. Our generative agents form synthetic populations seeded with your real data â€ƒ´ reviews, CRM histories, social signals, and purchases â€ƒ´ to produce dynamic, lifelike consumer journeys.</p>\
+					<p>Replace slow, expensive surveys and biased panels with AI-driven social simulations. Our generative agents form synthetic populations seeded with your real data â€ƒï¿½ reviews, CRM histories, social signals, and purchases â€ƒï¿½ to produce dynamic, lifelike consumer journeys.</p>\
 					<ul class="checks">\
 						<li>Faster insights: from weeks to hours</li>\
 						<li>Cheaper research: no panel recruiting</li>\
@@ -95,7 +95,7 @@ bash -lc 'cat > index.html <<"EOF"\
 				</div>\
 				<div class="card glass">\
 					<h3>Why it matters</h3>\
-					<p>Agents interact, influence, and make purchase decisions over time â€ƒ´ revealing emergent behaviors that static methods miss.</p>\
+					<p>Agents interact, influence, and make purchase decisions over time â€ƒï¿½ revealing emergent behaviors that static methods miss.</p>\
 					<div class="mini-visual" aria-hidden="true"></div>\
 				</div>\
 			</div>\
@@ -160,7 +160,7 @@ bash -lc 'cat > index.html <<"EOF"\
 			<div class="container two-col">\
 				<div>\
 					<h2>About us</h2>\
-					<p>We are a YC-backed team with backgrounds in economics, operations research, and AI. We are building the next generation of market research â€ƒ´ dynamic, synthetic, and grounded in real data.</p>\
+					<p>We are a YC-backed team with backgrounds in economics, operations research, and AI. We are building the next generation of market research â€ƒï¿½ dynamic, synthetic, and grounded in real data.</p>\
 				</div>\
 				<div class="card glass">\
 					<h3>Our belief</h3>\
@@ -172,7 +172,7 @@ bash -lc 'cat > index.html <<"EOF"\
 		<section id="cta" class="section cta">\
 			<div class="container">\
 				<h2>Get early access</h2>\
-				<p>Request a demo and see your market â€ƒ´ simulated.</p>\
+				<p>Request a demo and access the beta.</p>\
 				<form class="demo-form" action="https://formspree.io/f/xbldzqed" method="POST">\
 					<input type="text" name="name" placeholder="Your name" required>\
 					<input type="email" name="email" placeholder="Work email" required>\
@@ -188,7 +188,7 @@ bash -lc 'cat > index.html <<"EOF"\
 			<div class="logo">Hadmaya</div>\
 			<div class="fine">\
 				<span>Â© <span id="year"></span> Hadmaya</span>\
-				<a href="mailto:hello@hadmaya.ai">hello@hadmaya.ai</a>\
+				<a href="mailto:founders@hadmaya.ai">contact@hadmaya.com</a>\
 			</div>\
 		</div>\
 	</footer>\
@@ -258,7 +258,7 @@ body {\
 \
 .checks { list-style: none; padding: 0; margin: 16px 0 0; }\
 .checks li { margin: 8px 0; padding-left: 24px; position: relative; }\
-.checks li::before { content: "âƒ¼ƒ´"; position: absolute; left: 0; color: var(--accent); }\
+.checks li::before { content: "âƒ¼ï¿½ï¿½"; position: absolute; left: 0; color: var(--accent); }\
 \
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }\
 .step { padding: 18px; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; background: rgba(255,255,255,0.04); }\
@@ -357,3 +357,53 @@ bash -lc 'ls -la src | cat'
 bash -lc 'cat src/sections | cat'
 bash -lc 'ls -la src/sections | cat'
 bash -lc 'npm install --no-fund --no-audit | cat'
+npm install -g firecrawl-mcp
+env FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecrawl-mcp
+env FIRECRAWL_API_KEY=fc-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 npx -y firecrawl-mcp
+bash -lc 'npm run dev --silent | cat'
+git push origin main
+git add .
+git commit -m "initial commit"
+git push origin main
+git pull
+git push origin main
+git init -b main
+printf "node_modules/\ndist/\n.vite/\n.DS_Store\n" >> .gitignore
+git add -A
+git commit -m "Initial commit: site"
+git remote add origin https://github.com/Fluentive-AI/your-new-repo.git
+git remote add origin https://github.com/Fluentive-AI/fluentive-site-sims.git
+git remote set-url origin https://github.com/Fluentive-AI/fluentive-site-sims.git
+git push -u origin main
+git add .
+git remote add origin https://github.com/Fluentive-AI/fluentive-site-sim.git
+git init -b main\
+
+git add -A\
+
+git commit -m "Initial commit: Hadmaya site"\
+
+git remote add origin https://github.com/Fluentive-AI/fluentive-site-sims.git\
+
+git push -u origin main
+git remote add origin https://github.com/Fluentive-AI/fluentive-site-sim.git\
+
+git remote add origin https://github.com/Fluentive-AI/fluentive-site-sim.git
+git remote -v
+git remote set-url origin https://github.com/Fluentive-AI/fluentive-site-sim.git
+git push -u origin main
+pnpm run dev
+bash -lc 'npm run dev --silent | cat'
+bash -lc 'ls -la | cat'
+bash -lc 'npm install --silent | cat'
+mkdir -p assets && touch index.html styles.css script.js
+pnpm run dev
+npm run dev
+npm run dev
+npm run dev
+npm install
+npm run i
+npm install
+npm install
+python3 -m http.server 8080
+npm run dev

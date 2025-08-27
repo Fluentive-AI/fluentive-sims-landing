@@ -13,19 +13,55 @@ export function Hero(){
     let nodes: {x:number;y:number;vx:number;vy:number;r:number}[] = []
 
     function resize(){
-      width = canvas.width = container.clientWidth
-      height = canvas.height = 360
+      if (!canvas || !container) return
+      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const cssWidth = container.clientWidth
+      const cssHeight = container.clientHeight || 420
+
+      canvas.style.width = `${cssWidth}px`
+      canvas.style.height = `${cssHeight}px`
+      canvas.width = Math.floor(cssWidth * dpr)
+      canvas.height = Math.floor(cssHeight * dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+
+      width = cssWidth
+      height = cssHeight
       nodes = createNodes()
     }
     function createNodes(){
-      const count = Math.max(28, Math.floor(width * height / 15000))
-      return Array.from({length: count}, () => ({
-        x: Math.random()*width,
-        y: Math.random()*height,
-        vx: (Math.random()-0.5)*0.35,
-        vy: (Math.random()-0.5)*0.35,
-        r: 2 + Math.random()*2
-      }))
+      const area = width * height
+      const count = Math.max(12, Math.floor(area / 45000))
+      const margin = Math.min(width, height) * 0.10
+      const nodes = [] as {x:number;y:number;vx:number;vy:number;r:number}[]
+      for (let i = 0; i < count; i++){
+        const biasToEdge = Math.random() < 0.8
+        let x = Math.random() * width
+        let y = Math.random() * height
+        if (biasToEdge){
+          const edge = Math.floor(Math.random() * 4)
+          if (edge === 0){ // top
+            x = Math.random() * width
+            y = Math.random() * margin
+          } else if (edge === 1){ // bottom
+            x = Math.random() * width
+            y = height - Math.random() * margin
+          } else if (edge === 2){ // left
+            x = Math.random() * margin
+            y = Math.random() * height
+          } else { // right
+            x = width - Math.random() * margin
+            y = Math.random() * height
+          }
+        }
+        nodes.push({
+          x,
+          y,
+          vx: (Math.random()-0.5)*0.25,
+          vy: (Math.random()-0.5)*0.25,
+          r: 2 + Math.random()*1.5
+        })
+      }
+      return nodes
     }
     function step(){
       ctx.clearRect(0,0,width,height)
@@ -34,9 +70,9 @@ export function Hero(){
           const a = nodes[i], b = nodes[j]
           const dx = a.x-b.x, dy = a.y-b.y
           const d2 = dx*dx+dy*dy
-          if (d2 < 150*150){
-            const alpha = 1 - d2/(150*150)
-            ctx.strokeStyle = `rgba(124,92,255,${alpha*0.35})`
+          if (d2 < 130*130){
+            const alpha = 1 - d2/(130*130)
+            ctx.strokeStyle = `rgba(124,92,255,${alpha*0.25})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
@@ -46,7 +82,7 @@ export function Hero(){
         }
       }
       for (const n of nodes){
-        ctx.fillStyle = 'rgba(255,255,255,0.9)'
+        ctx.fillStyle = 'rgba(0,0,0,0.9)'
         ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI*2); ctx.fill()
         n.x += n.vx; n.y += n.vy
         if (n.x < 0 || n.x > width) n.vx *= -1
@@ -61,20 +97,101 @@ export function Hero(){
   }, [])
 
   return (
-    <section className="section">
-      <div className="container text-center">
-        <h1 className="h1">Reinventing Market Research with AI</h1>
-        <p className="sub max-w-3xl mx-auto mt-3">Simulate consumer behavior with generative agents to test, learn, and decide faster.</p>
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-          <a href="#cta" className="btn-primary">Get early access</a>
-          <a href="#how" className="btn-ghost">See how it works</a>
+    <section className="section relative overflow-hidden min-h-[60vh]">
+      {/* Background agent network canvas (fills hero) */}
+      <div ref={containerRef} className="absolute inset-0 z-0 pointer-events-none">
+        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
+      </div>
+      {/* Hero-local gooey background */}
+      <div className="pointer-events-none absolute inset-0 -z-10" style={{ filter: 'url(#goo)' }} aria-hidden>
+        <div className="absolute -top-24 -left-16 w-[34rem] h-[34rem] rounded-full bg-black/20 blur-3xl" />
+        <div className="absolute top-1/3 -right-24 w-[36rem] h-[36rem] rounded-full bg-black/15 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30rem] h-[14rem] rounded-full bg-black/10 blur-2xl" />
+      </div>
+      {/* SVG goo filter */}
+      <svg width="0" height="0" className="absolute -z-10" aria-hidden>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -12" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+
+      <div className="container text-center relative">
+        {/* subtle grid + vignette for consultant-tech feel */}
+        <div className="absolute inset-0 -z-10 soft-grid opacity-20" aria-hidden />
+        <div className="absolute inset-0 -z-10 vignette" aria-hidden />
+        <div className="mx-auto max-w-4xl glass rounded-2xl p-6 md:p-8 border border-white/10 backdrop-blur-xl relative">
+          {/* subtle inner edge highlight */}
+          <div className="absolute inset-0 pointer-events-none" aria-hidden>
+            <div className="absolute inset-0 [mask:linear-gradient(180deg,black,transparent_70%)] opacity-60"
+                 style={{ background: 'conic-gradient(from 120deg, hsla(258,90%,66%,.18), hsla(196,100%,52%,.18), transparent 60%)' }} />
+          </div>
+
+          <h1 className="h1 font-normal font-helvetica">A new playbook for <br /><span className="bg-gradient-to-r from-black to-neutral-400 bg-clip-text text-transparent">consumer insights</span></h1>
+          <p className="sub max-w-3xl mx-auto mt-3 text-xl md:text-2xl leading-relaxed">
+            Simulate true-to-life  consumers, test hypotheses in minutes, <br />and anticipate outcomes before taking bets in the real world.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://forms.gle/Y4ZfdEQEVQxTantWA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gradient-dark rounded-full join-waitlist text-white/90"
+              onMouseEnter={(e)=>{
+                const t = e.currentTarget as HTMLElement;
+                const r = t.getBoundingClientRect();
+                t.style.setProperty('--mx', (r.width/2)+'px');
+                t.style.setProperty('--my', (r.height/2)+'px');
+              }}
+              onMouseMove={(e)=>{
+                const t = e.currentTarget as HTMLElement;
+                const r = t.getBoundingClientRect();
+                t.style.setProperty('--mx', (e.clientX - r.left)+'px');
+                t.style.setProperty('--my', (e.clientY - r.top)+'px');
+              }}
+              onMouseLeave={(e)=>{
+                const t = e.currentTarget as HTMLElement;
+                t.style.removeProperty('--mx');
+                t.style.removeProperty('--my');
+              }}
+            >
+              <span className="text-stroke-black">Join the waitlist</span>
+            </a>
+            <a
+              href="https://calendly.com/eytan-rozenblum"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost"
+            >
+              Learn more
+            </a>
+          </div>
         </div>
-        <div ref={containerRef} className="glass rounded-2xl mt-8 border border-white/10 overflow-hidden">
-          <canvas ref={canvasRef} className="w-full h-[360px] block" />
-        </div>
-        <div className="mt-2 text-[13px] text-[hsl(var(--muted))] flex items-center justify-center gap-2">
-          <span>YC-backed</span>
-          <span>Economics • OR • AI</span>
+
+        {/* Credibility strip */}
+        <div className="mt-8 flex justify-center">
+          <div className="glass-card glass-pill px-4 py-2 inline-flex items-center gap-3">
+            <div className="glass-filter" />
+            <div className="glass-distortion-overlay" />
+            <div className="glass-overlay" />
+            <div className="glass-specular" />
+            <div className="glass-content inline-flex items-center gap-3">
+              <span className="text-sm">Backed by</span>
+              <img src="/yc-logo-full.png" alt="Y Combinator" className="h-4 md:h-5 object-contain" />
+            </div>
+            {/* SVG filter for distortion */}
+            <svg width="0" height="0" className="absolute">
+              <defs>
+                <filter id="glass-distortion">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="77" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
