@@ -26,7 +26,7 @@ export function Solutions() {
       metrics: [
         { number: "2×", label: "faster insights" },
         { number: "3x", label: "cheaper insights" },
-        { number: "90%", label: "accuracy vs. real-world testing" },
+        { number: "85%", label: "accuracy vs. real-world testing" },
       ]
     },
     {
