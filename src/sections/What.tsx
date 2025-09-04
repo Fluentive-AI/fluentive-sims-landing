@@ -96,19 +96,19 @@ function RequirementsCarousel({ items }: { items: { title: string; desc: string 
 
   return (
     <div className="mt-0">
-      <div className="relative mx-auto max-w-6xl h-96 flex items-center justify-center overflow-visible">
-        {/* Previews positioned behind left/right of center */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[26rem] -translate-y-1/2 opacity-40 scale-90 pointer-events-none z-0 blur-[1px]">
+      <div className="relative mx-auto max-w-6xl h-64 sm:h-80 lg:h-96 flex items-center justify-center overflow-hidden px-4">
+        {/* Previews positioned behind left/right of center - hidden on mobile */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-[26rem] -translate-y-1/2 opacity-40 scale-90 pointer-events-none z-0 blur-[1px] hidden lg:block">
           <GlassReqCard title={items[prevIdx].title} desc={items[prevIdx].desc} subtle className="shadow-none" />
         </div>
-        <div className="absolute left-1/2 top-1/2 translate-x-[6rem] -translate-y-1/2 opacity-40 scale-90 pointer-events-none z-0 blur-[1px]">
+        <div className="absolute left-1/2 top-1/2 translate-x-[6rem] -translate-y-1/2 opacity-40 scale-90 pointer-events-none z-0 blur-[1px] hidden lg:block">
           <GlassReqCard title={items[nextIdx].title} desc={items[nextIdx].desc} subtle className="shadow-none" />
         </div>
 
         {/* Controls + current card */}
-        <button onClick={prev} className="glass-arrow px-6 py-5 mr-2 z-10" aria-label="Previous">‹</button>
+        <button onClick={prev} className="glass-arrow px-3 py-4 md:px-6 md:py-5 mr-2 z-10 text-lg md:text-xl" aria-label="Previous">‹</button>
         <GlassReqCard title={items[idx].title} desc={items[idx].desc} className="z-10" strong />
-        <button onClick={next} className="glass-arrow px-6 py-5 ml-2 z-10" aria-label="Next">›</button>
+        <button onClick={next} className="glass-arrow px-3 py-4 md:px-6 md:py-5 ml-2 z-10 text-lg md:text-xl" aria-label="Next">›</button>
       </div>
 
       <div className="mt-3 flex justify-center gap-2">
@@ -122,14 +122,22 @@ function RequirementsCarousel({ items }: { items: { title: string; desc: string 
 
 function GlassReqCard({ title, desc, subtle, className, strong }: { title: string; desc: string; subtle?: boolean; className?: string; strong?: boolean }){
   return (
-    <div className={("relative glass-card rounded-xl ") + (className||'')} style={{ width: '20rem', height: '16rem' }}>
+    <div 
+      className={`relative glass-card rounded-xl w-full max-w-xs sm:max-w-sm lg:max-w-none ${className||''}`} 
+      style={{ 
+        width: 'min(20rem, calc(100vw - 8rem))', 
+        height: 'min(16rem, calc(100vw - 8rem))', 
+        maxWidth: '20rem',
+        maxHeight: '16rem'
+      }}
+    >
       <div className="glass-filter" />
       <div className="glass-distortion-overlay" />
       <div className="glass-overlay" style={strong ? { background: 'rgba(255,255,255,0.7)' } : undefined} />
       <div className="glass-specular" />
-      <div className="glass-content p-5 text-center flex flex-col justify-center h-full">
-        <div className="font-helvetica font-light text-xl md:text-2xl">{title}</div>
-        <p className="mt-2 text-[hsl(var(--muted))]">{desc}</p>
+      <div className="glass-content p-3 sm:p-4 lg:p-5 text-center flex flex-col justify-center h-full">
+        <div className="font-helvetica font-light text-lg sm:text-xl lg:text-2xl">{title}</div>
+        <p className="mt-1 sm:mt-2 text-sm sm:text-base text-[hsl(var(--muted))] leading-tight">{desc}</p>
       </div>
     </div>
   )

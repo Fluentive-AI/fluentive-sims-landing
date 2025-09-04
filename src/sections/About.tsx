@@ -25,7 +25,7 @@ export function About(){
             <div className="glass-content flex flex-col justify-center h-full">
               <h3 className="font-helvetica text-2xl font-normal text-center mb-6">Why we exist</h3>
               <p className="text-lg leading-relaxed text-center text-[hsl(var(--muted-foreground))]">
-                User demands are evolving faster than ever, and traditional market research cannot keep up. Weeks of waiting, expensive panels, and insights that are outdated by the time you get them.
+                Advertising professionals are flying blind. Traditional market research takes weeks, costs a fortune, and delivers insights that are outdated by launch. Meanwhile, campaigns fail because brands can't predict what will resonate with their audiences before spending millions on media.
               </p>
             </div>
           </div>
@@ -39,7 +39,7 @@ export function About(){
             <div className="glass-content flex flex-col justify-center h-full">
               <h3 className="font-helvetica text-2xl font-normal text-center mb-6">Our Mission</h3>
               <p className="text-lg leading-relaxed text-center text-[hsl(var(--muted-foreground))]">
-                We're building AI-powered synthetic consumers that learn from your real customer data, think like humans, and give you insights in minutes, not weeks.
+                We're developing AI-driven simulation technology that enables advertising professionals to forecast audience sentiment towards ad campaigns. Our product augments their existing capabilities by allowing them to forecast campaign effectiveness and identify the messages that will resonate most, optimizing creative execution with speed and precision.
               </p>
             </div>
           </div>

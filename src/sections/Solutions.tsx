@@ -3,6 +3,21 @@ import React, { useState } from "react";
 export function Solutions() {
   const useCases = [
     {
+      id: "mktg",
+      title: "Marketing & Creative Effectiveness", 
+      kicker: "Accelerate, Scale and Optimize Marketing",
+      summary: [],
+      marketingCards: [
+        {title: "Forecast and optimize campaign performance pre-launch", desc: "Simulate audience sentiment to each part of your campaign. Eliminate guesswork and maximize ROI with real-time predictive insights."},
+        {title: "Identify and activate high-value channels and audiences", desc: "Predict which segments are most qualified for acquisition, upsell, cross-sell, and win-back, and tailor experiences and channel allocation to resonate most with them."}
+      ],
+      metrics: [
+        { number: "3×", label: "better ROI" },
+        { number: "50%", label: "faster learning" },
+        { number: "85%", label: "creative accuracy" }
+      ]
+    },
+    {
       id: "mrpd",
       title: "Product Development",
       kicker: "Test ideas faster, cheaper",
@@ -27,21 +42,6 @@ export function Solutions() {
         { number: "2×", label: "faster insights" },
         { number: "3x", label: "cheaper insights" },
         { number: "85%", label: "accuracy vs. real-world testing" },
-      ]
-    },
-    {
-      id: "mktg",
-      title: "Marketing & Creative Effectiveness", 
-      kicker: "Accelerate, Scale and Optimize Marketing",
-      summary: [],
-      marketingCards: [
-        {title: "Forecast and optimize campaign performance pre-launch", desc: "Simulate audience sentiment to each part of your campaign. Eliminate guesswork and maximize ROI with real-time predictive insights."},
-        {title: "Identify and activate high-value channels and audiences", desc: "Predict which segments are most qualified for acquisition, upsell, cross-sell, and win-back, and tailor experiences and channel allocation to resonate most with them."}
-      ],
-      metrics: [
-        { number: "3×", label: "better ROI" },
-        { number: "50%", label: "faster learning" },
-        { number: "85%", label: "creative accuracy" }
       ]
     },
   ];

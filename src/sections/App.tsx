@@ -2,7 +2,6 @@ import React from 'react'
 import { Hero } from './Hero'
 import { What } from './What'
 import { Solutions } from './Solutions'
-import { About } from './About'
 import { CTA } from './CTA'
 import { Footer } from './Footer'
 
@@ -19,12 +18,10 @@ export function App(){
             <nav className="hidden md:flex items-center justify-center gap-6 text-[hsl(var(--muted))] text-center">
               <a href="#what" className="hover:text-black">What we do</a>
               <a href="#solutions" className="hover:text-black">Solutions</a>
-              <a href="#about" className="hover:text-black">About</a>
+              <a href="#cta" className="hover:text-black">Get started</a>
             </nav>
             <a
-              href="https://forms.gle/Y4ZfdEQEVQxTantWA"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#cta"
               className="btn-white rounded-full px-5 py-3 md:px-9 md:py-3 text-sm md:text-base shrink-0 justify-self-end"
             >
               Sign up
@@ -37,7 +34,6 @@ export function App(){
         <Hero />
         <What />
         <Solutions />
-        <About />
         <CTA />
       </main>
 

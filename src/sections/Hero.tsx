@@ -136,10 +136,8 @@ export function Hero(){
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://forms.gle/Y4ZfdEQEVQxTantWA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gradient-dark rounded-full join-waitlist text-white/90"
+              href="#cta"
+              className="btn-gradient-dark rounded-full join-waitlist text-white/90 w-52 px-8 py-3"
               onMouseEnter={(e)=>{
                 const t = e.currentTarget as HTMLElement;
                 const r = t.getBoundingClientRect();
@@ -164,7 +162,7 @@ export function Hero(){
               href="https://calendly.com/eytan-rozenblum"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-ghost"
+              className="btn-ghost rounded-full w-52 px-8 py-3"
             >
               Learn more
             </a>
